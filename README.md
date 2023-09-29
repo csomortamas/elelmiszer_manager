@@ -1,2 +1,1 @@
-# elelmiszer_manager
-# DVC0Z3
+# Élelmiszer manager
