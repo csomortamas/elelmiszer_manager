@@ -3,7 +3,8 @@
  */
 
 module.exports = function(objectrepository, viewName) {
-    return function(req, res) {
-        console.log("render")
-    };
-};
+    return function(req, res, next) {
+        console.log('rendering')
+        next()
+    }
+}

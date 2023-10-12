@@ -18,20 +18,21 @@ module.exports = function(app) {
     
     app.get(
         '/',
-        renderMW(objRepo, index)
+        getTarolokMW(objRepo),
+        renderMW(objRepo, 'index')
     )
 
     app.use(
         '/tarolo/new',
         saveTaroloMW(objRepo),
-        renderMW(objRepo, tarolo_uj)
+        renderMW(objRepo, 'tarolo_uj')
     )
 
     app.use(
         '/tarolo/edit/:taroloid',
         getTaroloMW(objRepo),
         saveTaroloMW(objRepo),
-        renderMW(objRepo, tarolo_mosdositas)
+        renderMW(objRepo, 'tarolo_mosdositas')
     )
 
     app.get(
@@ -42,14 +43,14 @@ module.exports = function(app) {
 
     app.get(
         'termek/:taroloid',
-        getTermekMW(objRepo),
-        renderMW(objRepo, tarolo)
+        getTermekekMW(objRepo),
+        renderMW(objRepo, 'tarolo')
     )
 
     app.use(
         'termek/new/:taroloid',
         saveTermekMW(objRepo),
-        renderMW(objRepo, termek_uj)
+        renderMW(objRepo, 'termek_uj')
     )
 
     app.use(
@@ -57,7 +58,7 @@ module.exports = function(app) {
         getTaroloMW(objRepo),
         getTermekMW(objRepo),
         saveTermekMW(objRepo),
-        renderMW(objRepo, termek_modositas)
+        renderMW(objRepo, 'termek_modositas')
     )
 
     app.get(
