@@ -1,13 +1,11 @@
 var express = require('express')
 var app = express()
 
+// set ejs as view engine
+app.set('view engine', 'ejs');
+
 // Load routing
 require('./route/index')(app)
-
-app.get('/', (req, res, next) => {
-    console.log('hello world')
-    res.send('Hello World')
-})
 
 app.use((err, req, res, next) => {
     res.end('Problem...');

@@ -18,7 +18,7 @@ module.exports = function(app) {
     
     app.get(
         '/',
-        getTarolokMW(objRepo),
+        //getTarolokMW(objRepo),
         renderMW(objRepo, 'index')
     )
 

@@ -1,23 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Manager</title>
-        <!-- Latest compiled and minified CSS -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
-    </head>
-    <body>
-        <div class="container p-5">
-            <h1>Élelmiszer manager</h1>
+<%- include('header') -%>
+<div class="container p-5">
+    <h1>Élelmiszer manager</h1>
             <table class="table table-bordered">
                 <thead>
                     <tr>
                         <th><h5><b>Háztartás</b></h5></th>
                         <th colspan="3">
                             <button type="button" class="btn btn-outline-dark">Törlés</button>
-                            <a href="tarolo_modositas.html"><button type="button" class="btn btn-outline-dark">Módosítás</button></a>
-                            <a href="tarolo.html"><button type="button" class="btn btn-outline-dark">Tartalom</button></a>
+                            <a href="tarolo_modositas.ejs"><button type="button" class="btn btn-outline-dark">Módosítás</button></a>
+                            <a href="tarolo.ejs"><button type="button" class="btn btn-outline-dark">Tartalom</button></a>
                         </th>
                     </tr>
                     <tr>
@@ -48,7 +39,6 @@
                     </tr>
                     </tbody>
             </table>
-            <a href="tarolo_uj.html"><button type="button" class="btn btn-outline-dark">+</button></a>
+            <a href="tarolo_uj.ejs"><button type="button" class="btn btn-outline-dark">+</button></a>
         </div>
-    </body>
-</html>
+<%- include('footer') -%>
