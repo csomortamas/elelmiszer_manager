@@ -1,3 +1,12 @@
+const TaroloModel = require('./models/tarolo')
+let egyTarolo = new TaroloModel()
+
+egyTarolo.nev = 'Huto'
+
+console.log(egyTarolo.save())
+
+
+/*
 var express = require('express')
 var app = express()
 
@@ -15,3 +24,4 @@ app.use((err, req, res, next) => {
 var server = app.listen(3000, () => {
     console.log('Running on localhost:3000')
 })
+*/
